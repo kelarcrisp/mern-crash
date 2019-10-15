@@ -6,7 +6,7 @@ router.route('/').get((req, res) => {
         .then(users => res.json(users))
         .catch(err => res.status(400).json('Error:' + err))
 });
-
+// you can go to postman and test this, if the user is added to the DB then it will notify you 'user added!'
 router.route('/add').post((req, res) => {
     const username = req.body.username;
     const newUser = new User({ username });
